@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтеграція зовнішнього API для живого пошуку фільмів</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex justify-center items-center min-h-[50vh]">
+        <div class="relative w-full max-w-lg bg-white p-6 rounded-lg shadow-lg">
+          <form class="flex flex-col gap-4">
+            <div class="flex items-center gap-4">
+              <label for="movie-title" class="text-gray-700 font-semibold">Title:</label>
+              <input
+                id="movie-title"
+                type="text"
+                placeholder="Enter movie title..."
+                class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            <div class="flex items-center gap-4">
+              <label for="movie-year" class="text-gray-700 font-semibold">Year:</label>
+              <input
+                id="movie-year"
+                type="number"
+                placeholder="Enter release year..."
+                class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+            <div class="flex gap-4">
+              <button
+                type="reset"
+                class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              >
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+    </div>
+    <div id="results" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-4 py-6">
+        <!-- тут фильмы -->
+    </div>
+</body>
+</html>
