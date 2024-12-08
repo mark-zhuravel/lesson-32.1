@@ -52,7 +52,7 @@ function resultsOnTheScreen(data) {
 
 async function fetchMovies(title, year) {
   try {
-    const url = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${title}${year ? `&y=${year}` : ''}`;
+    const url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${title}${year ? `&y=${year}` : ''}`; // надо поменять протокол на https, хотя в доке http, чтобы не вылазила ошибка Mixed Content
     const response = await fetch(url);
     const data = await response.json();
 
